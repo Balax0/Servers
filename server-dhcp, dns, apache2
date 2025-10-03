@@ -22,6 +22,58 @@ now lets proceed with the server setups
 
 lets starts with the dhcp server setup
 >> packages to be installed - isc-dhcp-server 
+>> and to use ifconfig we should install nettools
+
+>> nic add -- enp0s3 
+>> sudo nano /etc/default/isc-dhcp-server  > enter
+  change the settings 
+  interfacesv4= " enp0s3 "
+
+>>main dhcp file configuration
+  cd /etc/dhcp/
+  ls
+  sudo nano /etc/dhcp/dhcpd.conf  > enter
+  update subnetting options
+  subnet 10.0.2.1  netmask 255.255.255.0
+>>command the dns, dn because we doesnt have a dns server yet( hence it is dhcp server connection)
+  option subnetmask 255.255.255.0
+  option boardcast 10.0.2.255
+  crtl o enter crtl x
+
+>> start the server 
+sudo start isc-dhcp-server
+sudo status "  "   "
+
+after get into the client os to establish the connection
+login into kali machine ( my client ) 
+
+check ifconfig
+>> sudo nano /etc/network/interfaces
+>>update -- auto eth0, iface eth0 inet dhcp
+
+## troubleshooting is going on >i cant find the dhcp server with my client server its been 2 hrs still troubleshooting going on
+that problem is i cant connect the two vms in a same network
+ 
+>>to trouble shoot any errors in dhcpd.conf use " sudo dhcpd -t -cf /etc/dhcp/dhcpd.conf "
+hence it helped me to solve the problem
+
+finally found the error because of a " ; " .  :( :(
+
+>> type systemctl status networking.service
+and got the service running 
+now my kali linux got the ip of 10.0.2.101/24, 10.0.2.255
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
