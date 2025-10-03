@@ -1,0 +1,41 @@
+so, this will be my sample doc about the process i have done to setup the dns, dhcp, web server
+client - for my client im gonna use kali linux i already have it, so im gonna use it as client
+server - for my server im installing ubuntu server 22.04, which i get to know about from the youtube walkthrough videos 
+
+> i need to make sure that both my client (kali) and server (ubuntu) should be in a same lan network
+
+> to make that i think i need to make some changes in my virtual box 
+
+> after installation of ubuntu server i should install "bind9, bind9util, bind9doc" for dns setup, 
+and for dhcp "isc-dhcp-server" 
+and for web server "apache2"
+
+and there are online resources that helped me to setup the servers if possible ill share the exact links of the resources
+
+and for my vm's setup my kali is running in 1.5gb of ram and 20gb of storage
+for my server ubuntu im planning to allocate the same ram and storage memory, hence i only have a 8gb ram in my actuall laptop pc.
+
+
+--------------------server username and password (user name server, pass - server, server-ub )--------------------------------------------
+okay, i have done my vm server installation
+now lets proceed with the server setups
+
+lets starts with the dhcp server setup
+>> packages to be installed - isc-dhcp-server 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
