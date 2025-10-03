@@ -1,20 +1,20 @@
-So, this will be my sample doc about the process i have done to setup the DNS, DHCP, Web Server
+So, this will be my sample doc about the process i have done to setup the DNS, DHCP, Web Server \
 
-client - for my client im gonna use kali linux i already have it, so im gonna use it as client
+client - for my client im gonna use kali linux i already have it, so im gonna use it as client \
 
-server - for my server im installing ubuntu server 22.04, which i get to know about from the youtube walkthrough videos 
+server - for my server im installing ubuntu server 22.04, which i get to know about from the youtube walkthrough videos \
 
->> I need to make sure that both my client (kali) and server (ubuntu) should be in a same lan network
+>> I need to make sure that both my client (kali) and server (ubuntu) should be in a same lan network \
 
->> To make that i think i need to make some changes in my virtual box like for both VM's same internal network adaptor && NAT for Server VM
+>> To make that i think i need to make some changes in my virtual box like for both VM's same internal network adaptor && NAT for Server VM \
 
->> After installation of ubuntu server, I gonna install "bind9, bind9util, bind9doc" for DNS server setup, 
+>> After installation of ubuntu server, I gonna install "bind9, bind9util, bind9doc" for DNS server setup, \
 
->>For dhcp I use "isc-dhcp-server" (a popular, open-source server that implemented Dynamic Host Configuration Protocol (DHCP) to automatically assign IP addresses and other network configurations to devices)
+>>For dhcp I use "isc-dhcp-server" (a popular, open-source server that implemented Dynamic Host Configuration Protocol (DHCP) to automatically assign IP addresses and other network configurations to devices) \
   
->>For web server "apache2" (the Apache HTTP Server, a widely-used open-source web server software that serves websites)
+>>For web server "apache2" (the Apache HTTP Server, a widely-used open-source web server software that serves websites) \
 
-*****  And there are online resources that helped me to setup the servers if possible ill share the exact links of the resources  *****
+*****  And there are online resources that helped me to setup the servers if possible ill share the exact links of the resources  *****\
 
 And for my vm's setup -- kali is running in 1.5gb of ram and 20gb of storage
 for my server ubuntu, I'm planning to allocate the same ram and storage memory, hence i only have a 8gb ram in my actuall laptop pc.
@@ -110,6 +110,10 @@ and got the service running
 now my kali linux got the ip of 10.0.2.101/24, 10.0.2.255
 
 <img width="955" height="910" alt="successfulconnection" src="https://github.com/user-attachments/assets/471f52b3-0b3f-40de-b004-e01e00e7dde7" />
+
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-03 181833" src="https://github.com/user-attachments/assets/abe1789b-c551-4e4b-a783-a86c12f74f2a" />
+
 
 
 
