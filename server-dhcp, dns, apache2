@@ -22,6 +22,7 @@ now lets proceed with the server setups
 
 lets starts with the dhcp server setup
 >> packages to be installed - isc-dhcp-server 
+
 >> and to use ifconfig we should install nettools
 
 >> nic add -- enp0s3 
