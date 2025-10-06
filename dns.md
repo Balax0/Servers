@@ -1,4 +1,4 @@
-This repo is for my DNS server setup
+This repo is for my DNS server setup.
 server ubuntu client kali
 make sure to make them in a same network
 
