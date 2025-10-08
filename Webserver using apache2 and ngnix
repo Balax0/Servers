@@ -1,0 +1,64 @@
+Webserver Setup
+06/10/2025
+Balamurugan M
+Apache2 and Nginx Reverse proxy setup
+To configure a Webserver using Apache2 and set up a reverse proxy using Nginx to handle client
+requests.
+
+Step 1: Install Apache2 Web Server
+sudo apt update
+sudo apt install apache2
+
+Step 2: Create Two separate Websites
+- Create directories for both sites:
+sudo mkdir -p /var/www/site1
+sudo mkdir -p /var/www/site2
+- Assign ownership and permissions:
+sudo chown -R www-data:www-data /var/www/site1 /var/www/site2
+sudo chmod -R 755 /var/www/
+- Create simple HTML pages:
+echo "<h1>Welcome to Site 1</h1>" | sudo tee /var/www/site1/index.html
+echo "<h1>Welcome to Site 2</h1>" | sudo tee /var/www/site2/index.html
+
+Step 3: Configure Apache Virtual Hosts
+Edit the main configuration file:
+sudo nano /etc/apache2/sites-available/site1.conf
+sudo nano /etc/apache2/sites-available/site2.conf
+
+------------------------------------- 3
+Step 4: Enable Sites and Configure Ports
+- Enable both sites:
+sudo a2ensite site1.conf
+sudo a2ensite site2.conf
+- Edit Apache ports configuration:
+sudo nano /etc/apache2/ports.conf
+- Add:
+Listen 8081
+Listen 8082
+- Restart Apache:
+sudo systemctl restart apache2
+-------------------------------------------
+
+Step 5: Test Apache Locally
+http://10.0.14.220:8081 - (In the attached screenshot it is accessible in host system)
+
+Step 6: Install and Configure Nginx Reverse Proxy
+sudo apt install nginx –y
+sudo nano /etc/nginx/sites-available/reverse-proxy
+sudo ln -s /etc/nginx/sites-available/reverse-proxy /etc/nginx/sites-enabled/
+------------------------------------- 5
+
+Step 7: DNS and LAN Access Configuration
+On the client system (Windows or other VM), add local DNS entries to hosts file:
+Path: C:\Windows\System32\drivers\etc\hosts
+10.0.14.220 site1.bala.local
+10.0.14.220 site2.bala.local
+- Now you can access:
+- http://site1.bala.local
+http://site2.bala.local
+from any device in the same LAN (10.0.14.x network).
+
+Step 8: Verify Access and Functionality
+- ping site1.bala.local
+- curl http://site1.bala.local
+------------------------------------- 6
